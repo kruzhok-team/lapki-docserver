@@ -22,7 +22,7 @@
     <li class="list-group-item">В&nbsp;модальном окне на&nbsp;первой вкладке выбираем схему для&nbsp;<strong>Arduino Uno</strong> или&nbsp;<strong>Arduino Micro</strong>. После выбора схемы, появится <strong>область редактирования</strong> машин состояний;</li>
     <li class="list-group-item">На&nbsp;левой панели выберите <strong>Проводник</strong> (значок в&nbsp;виде кубика);</li>
     <li class="list-group-item">В&nbsp;появившейся вкладке нажмите кнопку <strong>Добавить...</strong> Появится модальное окно выбора компонента;</li>
-    <li class="list-group-item">Выберите компонент <strong>LED</strong>, введите название компонента и&nbsp;нажмите <strong>Добавить.</strong> В&nbsp;списке компонентов появится новый <strong>компонент</strong> с&nbsp;введённым ранее названием и&nbsp;соответствующим значком;</li>
+    <li class="list-group-item">Выберите компонент <strong>LED</strong>, введите название компонента и номер пина, к которому подключен светодиод, а затем &nbsp;нажмите<strong>Добавить.</strong> В&nbsp;списке компонентов появится новый <strong>компонент</strong> с&nbsp;введённым ранее названием и&nbsp;соответствующим значком;</li>
     <li class="list-group-item">Проделываем то&nbsp;же&nbsp;действие из&nbsp;<strong>пункта №6</strong> c&nbsp;компонентом <strong>Timer</strong>;</li>
     <li class="list-group-item"><strong>Дважды нажимаем</strong> левой кнопкой мыши на&nbsp;основном поле редактора. На&nbsp;месте клика появится <strong>новое пустое состояние</strong>;</li>
     <li class="list-group-item">
@@ -30,7 +30,7 @@
       <p class="mt-2 text-bg-success p-2"><em>Для&nbsp;отмены переименования нажмите клавишу <strong>Esc</strong> или&nbsp;же&nbsp;<strong>нажмите</strong> левой кнопкой мыши за&nbsp;пределами заголовка состояния.</em></p>
     </li>
     <li class="list-group-item">Под&nbsp;заголовком <strong>дважды</strong> нажимаем левой кнопкой мыши на&nbsp;пустую область состояния. Появится модальное окно для&nbsp;выбора нового события и&nbsp;его&nbsp;действий;</li>
-    <li class="list-group-item">Вверху в&nbsp;левом выпадающем списке выберите событие <strong>System</strong>, а&nbsp;в&nbsp;правом выпадающем списке действие <strong>onExit</strong>.</li>
+    <li class="list-group-item">Вверху в&nbsp;левом выпадающем списке выберите событие <strong>System</strong>, а&nbsp;в&nbsp;правом выпадающем списке действие <strong>onEnter</strong>.</li>
     <li class="list-group-item">
       Теперь нажмите кнопку с&nbsp;<strong>плюсом</strong> в&nbsp;области <strong>Делай</strong>. В&nbsp;модальном окне выберите действие <strong>Timer -> Start</strong>, а&nbsp;в&nbsp;появившемся ниже блоке введите <strong>1000</strong>. Нажмите <strong>Сохранить</strong>;
       <p class="mt-2 text-bg-success p-2"><em>В&nbsp;списке раздела <strong>Делай</strong> появится <strong>пиктографические изображения</strong> созданного Вами действия.</em></p>
@@ -70,11 +70,11 @@
       </p>
     </li>
     <li class="list-group-item">
-      Теперь <strong>сохраним</strong> бинарный код схемы для&nbsp;Arduino, для&nbsp;этого нажмите на&nbsp;кнопку <strong>Сохранить код</strong> в&nbsp;разделе <strong>Компилятор</strong>;
-      <p class="mt-2 text-bg-success p-2"><em>Так&nbsp;же&nbsp;Вы&nbsp;можете посмотреть код в&nbsp;отдельной вкладке нажав на&nbsp;кнопку <strong>Показать код</strong>.</em></p>
+      Чтобы <strong> сохранить </strong> бинарный код схемы для&nbsp;Arduino, для&nbsp;этого нажмите на&nbsp;кнопку <strong>Сохранить результат</strong> в&nbsp;разделе <strong>Компилятор</strong>;
+      <p class="mt-2 text-bg-success p-2"><em>Так&nbsp;же&nbsp;Вы&nbsp;можете посмотреть код в&nbsp;отдельной вкладке нажав на&nbsp;кнопку <strong>Показать код</strong>. А чтобы скачать - нажмите кнопку <strong> Сохранить код</strong> и выберите папку для сохранения</em>.</p>
     </li>
     <li class="list-group-item">
-      После&nbsp;того, как&nbsp;мы&nbsp;сохранили нашу схему, можем теперь прошить подключённую плату Arduino. Для&nbsp;этого на&nbsp;левой панели выберите раздел <strong>Загрузчик</strong>, выберите из&nbsp;списка подключенных устройств плату Arduino и&nbsp;ниже нажмите на&nbsp;кнопку <strong>Прошить</strong>. В&nbsp;левом нижнем углу раздела <strong>Загрузчик</strong> появится уведомление <strong>Загрузка завершена!</strong>;
+      После&nbsp;того, как&nbsp;мы&nbsp;преобразовали нашу схему в бинарный код, мы можем теперь загрузить ее в подключённую плату Arduino. Для&nbsp;этого на&nbsp;левой панели выберите раздел <strong>Загрузчик</strong>, выберите из&nbsp;списка подключенных устройств плату Arduino и&nbsp;ниже нажмите на&nbsp;кнопку <strong>Загрузить</strong>. В&nbsp;левом нижнем углу раздела <strong>Загрузчик</strong> появится уведомление <strong>Загрузка завершена!</strong>;
       <p class="mt-2 text-bg-success p-2"><em>Теперь плата Arduino начнёт работать по&nbsp;той&nbsp;схеме, которую Вы&nbsp;сделали.</em></p>
     </li>
     <li class="list-group-item">Если после открытия схемы машины состояний камера редактора находится для&nbsp;Вас&nbsp;слишком <strong>близко или далеко</strong>, то&nbsp;справа в&nbsp;нижнем углу редактора Вы&nbsp;можете <strong>приблизить или&nbsp;отдалить</strong> камеру. Либо&nbsp;зажмите клавишу <strong>Ctrl</strong> на&nbsp;клавиатуре и&nbsp;прокручивайте колёсико мыши до&nbsp;нужного положения камеры;</li>
