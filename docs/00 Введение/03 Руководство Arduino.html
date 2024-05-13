@@ -18,9 +18,9 @@
     <ol class="list-group list-group-numbered">
       <li class="list-group-item">На&nbsp;боковой панели выберите раздел <strong>Документ</strong> (значок в&nbsp;виде трёх полосок);</li>
       <li class="list-group-item">В&nbsp;появившейся вкладке нажимаем на&nbsp;<strong>Создать...</strong>;</li>
-      <li class="list-group-item">В&nbsp;всплывающем окне на&nbsp;первой вкладке выбираем схему для&nbsp;платформы <strong>Arduino Uno</strong> или&nbsp;<strong>Arduino Micro</strong>. После выбора схемы, появится <strong>поле редактирования</strong> машин состояний;</li>
+      <li class="list-group-item">В&nbsp;диалоговом окне на&nbsp;первой вкладке выбираем схему для&nbsp;платформы <strong>Arduino Uno</strong> или&nbsp;<strong>Arduino Micro</strong>. После выбора схемы, появится <strong>поле редактирования</strong> машин состояний;</li>
       <li class="list-group-item">На&nbsp;боковой панели выберите раздел <strong>Проводник</strong> (значок в&nbsp;виде кубика);</li>
-      <li class="list-group-item">В&nbsp;появившейся вкладке нажмите кнопку <strong>Добавить...</strong> Появится всплывающее окно выбора компонента;</li>
+      <li class="list-group-item">В&nbsp;появившейся вкладке нажмите кнопку <strong>Добавить...</strong> Появится диалоговое окно выбора компонента;</li>
       <li class="list-group-item">Выберите компонент <strong>LED</strong>, введите название компонента и номер пина, к которому подключен светодиод, а&nbsp;затем нажмите<strong>Добавить.</strong> В&nbsp;списке компонентов появится новый <strong>компонент</strong> с&nbsp;введённым ранее названием и&nbsp;соответствующим значком;</li>
       <li class="list-group-item">Проделываем то&nbsp;же&nbsp;действие из&nbsp;<strong>пункта №6</strong> c&nbsp;компонентом <strong>Timer</strong>;</li>
       <li class="list-group-item"><strong>Дважды нажимаем</strong> левой кнопкой мыши на&nbsp;поле редактирования. На&nbsp;месте клика появится <strong>новое пустое состояние</strong>;</li>
@@ -28,10 +28,10 @@
         <strong>Дважды нажимаем</strong> левой кнопкой мыши на&nbsp;заголовок состояния <strong>или</strong>&nbsp;один раз на&nbsp;иконку карандаша. После&nbsp;переименовываем на&nbsp;<strong>Выключен</strong> и&nbsp;нажимаем на&nbsp;клавишу <strong>Enter</strong>;
         <p class="mt-2 text-bg-success p-2"><em>Для&nbsp;отмены переименования нажмите клавишу <strong>Esc</strong> или&nbsp;же&nbsp;<strong>нажмите</strong> левой кнопкой мыши за&nbsp;пределами заголовка состояния.</em></p>
       </li>
-      <li class="list-group-item">Под&nbsp;заголовком <strong>дважды</strong> нажимаем левой кнопкой мыши на&nbsp;пустую область состояния. Появится всплывающее окно для&nbsp;выбора нового события и&nbsp;его&nbsp;действий;</li>
+      <li class="list-group-item">Под&nbsp;заголовком <strong>дважды</strong> нажимаем левой кнопкой мыши на&nbsp;пустую область состояния. Появится диалоговое окно для&nbsp;выбора нового события и&nbsp;его&nbsp;действий;</li>
       <li class="list-group-item">Вверху в&nbsp;левом выпадающем списке выберите событие <strong>System</strong>, а&nbsp;в&nbsp;правом выпадающем списке действие <strong>onEnter</strong>.</li>
       <li class="list-group-item">
-        Теперь нажмите кнопку с&nbsp;<strong>плюсом</strong> в&nbsp;области <strong>Делай</strong>. В&nbsp;всплывающем окне выберите действие <strong>Timer → Start</strong>, а&nbsp;в&nbsp;появившемся ниже блоке введите <strong>1000</strong>. Нажмите <strong>Сохранить</strong>;
+        Теперь нажмите кнопку с&nbsp;<strong>плюсом</strong> в&nbsp;области <strong>Делай</strong>. В&nbsp;диалоговом окне выберите действие <strong>Timer → Start</strong>, а&nbsp;в&nbsp;появившемся ниже блоке введите <strong>1000</strong>. Нажмите <strong>Сохранить</strong>;
         <p class="mt-2 text-bg-success p-2"><em>В&nbsp;списке раздела <strong>Делай</strong> появится <strong>пиктографические изображения</strong> созданного Вами действия.</em></p>
       </li>
       <li class="list-group-item">Чтобы&nbsp;<strong>удалить</strong> действие из&nbsp;списка в&nbsp;разделе <strong>Делай</strong>, достаточно выбрать его&nbsp;и&nbsp;следом нажать кнопку с&nbsp;иконкой <strong>минуса</strong>. После&nbsp;чего, выбранное действие будет удалено из&nbsp;списка;</li>
@@ -46,7 +46,7 @@
       </li>
       <li class="list-group-item">Если&nbsp;вы&nbsp;создали состояние с&nbsp;нуля, то&nbsp;переходите к&nbsp;следующему шагу, если&nbsp;же&nbsp;вы&nbsp;создали копию, то&nbsp;переименуйте её&nbsp;на&nbsp;<strong>Включен</strong>. Затем&nbsp;<strong>дважды</strong> нажмите на&nbsp;событие и&nbsp;выберите <strong>System → onEnter</strong>, потом&nbsp;так&nbsp;же&nbsp;измените действие <strong>LED1 → off</strong> на&nbsp;<strong>LED1 → on</strong></li>
       <li class="list-group-item">Нажмите <strong>правой кнопкой мыши</strong> по&nbsp;последнему созданному состоянию и&nbsp;в&nbsp;появившемся контекстном меню выберите раздел <strong>Редактирование.</strong>, затем&nbsp;<strong>Назначить начальным.</strong> Рядом с&nbsp;выбранным состоянием появится элемент с&nbsp;названием <strong>Начало</strong>, обозначающая его&nbsp;начальным процессом машины состояний;</li>
-      <li class="list-group-item">Наведитесь <strong>курсором</strong> на&nbsp;начальное состояние и&nbsp;нажмите на&nbsp;него&nbsp;один раз, затем переведите курсор на&nbsp;появившуюся на&nbsp;рамке состояния иконку со&nbsp;знаком&nbsp;<strong>плюс</strong> и&nbsp;потяните до&nbsp;другого состояния. Появится всплывающее окно для&nbsp;редактирования нового перехода(условия);</li>
+      <li class="list-group-item">Наведитесь <strong>курсором</strong> на&nbsp;начальное состояние и&nbsp;нажмите на&nbsp;него&nbsp;один раз, затем переведите курсор на&nbsp;появившуюся на&nbsp;рамке состояния иконку со&nbsp;знаком&nbsp;<strong>плюс</strong> и&nbsp;потяните до&nbsp;другого состояния. Появится диалоговое окно для&nbsp;редактирования нового перехода(условия);</li>
       <li class="list-group-item">В&nbsp;появившемся окне выберите событие <strong>Timer → timeout</strong>. Нажмите на&nbsp;кнопку <strong>Сохранить</strong>;</li>
       <li class="list-group-item">
         Создайте теперь в&nbsp;точности такой же&nbsp;переход, но&nbsp;уже&nbsp;в&nbsp;обратную сторону(от&nbsp;обычного состояния до&nbsp;начального);
