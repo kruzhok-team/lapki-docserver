@@ -13,6 +13,11 @@
     <h1 class="display-6 mt-3">
       01. Установка AVRDUDE
     </h1>
+    <p class="mt-3 text-bg-warning p-2">
+      <strong><a href="https://github.com/avrdudes/avrdude" class="link-primary">AVRDude</a></strong> (AVR Downloader-Uploader)&nbsp;—&nbsp;кроссплатформенная свободная консольная программа, предназначенная для прошивки микроконтроллеров, таких как Arduino. Она нужна загрузчику для того, чтобы тот мог прошивать, подключённые устройства.<br>
+      Не нужно скачивать avrdude,&nbsp;если&nbsp;Вы&nbsp;собираетесь подключиться к&nbsp;<b>удалённому</b> загрузчику.<br>
+      Не забудьте <b>перезагрузить</b> IDE после установки и&nbsp;настройки avrdude!
+    </p>
     <p class="mt-3 text-bg-success p-2">Windows</p>
     <p class="mt-3">
       <strong>1. Скачайте avrdude:</strong><br>
@@ -25,7 +30,7 @@
       После&nbsp;завершения загрузки разархивируйте скачанный архив с&nbsp;avrdude в&nbsp;удобном для&nbsp;Вас месте на&nbsp;компьютере.
     </p>
     <p class="mt-3">
-      <strong>3. Добавьте avrdude в&nbsp;переменные среды (необязательно):</strong><br>
+      <strong>3. Добавьте avrdude в&nbsp;переменные среды (необязательно, если Вы собираетесь добавить исполняемый файл в папку с загрузчиком):</strong><br>
       Найдите и&nbsp;скопируйте путь к&nbsp;распакованной папке avrdude.<br>
       Откройте командную строку от&nbsp;<strong>прав администратора</strong>.<br>
       Используйте команду setx для&nbsp;добавления пути к&nbsp;папке в&nbsp;переменную PATH. Например, чтобы&nbsp;добавить путь D:\avrdude-v7.3-windows-x64:<br>
@@ -45,19 +50,26 @@
     </p>
     <p class="mt-3 text-bg-success p-2">MacOS</p>
     <p class="mt-3">
-      <strong>1. Установите Homebrew (если его нет):</strong><br>
+      На&nbsp;macOS avrdude можно установить через&nbsp;<strong><a href="https://brew.sh/" class="link-primary">Homebrew</a></strong>,&nbsp;либо&nbsp;через&nbsp;<strong><a href="https://www.macports.org/" class="link-primary">MacPorts</a></strong>. 
+      В&nbsp;этой инструкции представлен способ установки через&nbsp;Homebrew:
+      <br>
+      <strong>1. Открыть терминал на macOS</strong>:
+      <br>
+      Терминал лежит в&nbsp;папке Applications/Utilities,&nbsp;можно найти через&nbsp;Finder.
+      <br>
+      <strong>2. Установите Homebrew (если его нет):</strong><br>
       Откройте терминал и&nbsp;выполните следующую команду:<br>
 
       <strong>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</strong><br>
     </p>
     <p class="mt-3">
-      <strong>2. Установите avrdude:</strong><br>
+      <strong>3. Установите avrdude:</strong><br>
       В&nbsp;терминале выполните команду:<br>
 
       <strong>brew install avrdude</strong>
     </p>
     <p class="mt-3">
-      <strong>3. Запустите avrdude:</strong><br>
+      <strong>4. Протестируйте установку:</strong><br>
       После установки avrdude Вы&nbsp;можете запустить его&nbsp;из&nbsp;терминала, введя команду <strong>avrdude</strong>.
     </p>
     <p class="mt-3 text-bg-success p-2">Linux (Ubuntu/Debian)</p>
@@ -81,14 +93,25 @@
       <strong>2. Запустите avrdude:</strong><br>
       После установки avrdude Вы&nbsp;можете запустить его&nbsp;из&nbsp;терминала, введя команду <strong>avrdude</strong>.
     </p>
-    <p class="mt-3">
+    <p class="mt-3 text-bg-warning p-2">
       В&nbsp;большинстве дистрибутивов Linux в&nbsp;репозиториях программного обеспечения имеется AVRDUDE. В&nbsp;Ubuntu и&nbsp;других дистрибутивах на&nbsp;основе Debian (таких как&nbsp;Debian, Linux Mint и&nbsp;т.д.) вы&nbsp;можете ввести в&nbsp;командной строке следующую команду для&nbsp;установки AVRDUDE:
       <br><strong>sudo apt-get install avrdude</strong>
     </p>
+        <p class="mt-3 text-bg-success p-2">Добавление avrdude в папку с загрузчиком (для опытных пользователей)</p>
+    <p class="mt-3">
+      Если по&nbsp;какой-либо&nbsp;причине&nbsp;Вы не&nbsp;хотите использовать системный путь,&nbsp;то&nbsp;Вы&nbsp;можете добавить исполняемый файл <strong>avrdude</strong> и&nbsp;его конфигурационный файл <strong>avrdude.conf</strong> непосредственно в папку с загрузчиком 
+      внутри Lapki-IDE. Для этого Вам понадобится открыть внутренние файлы Lapki-IDE и найти там папку modules, которая лежит по пути: 
+      <br>
+      <strong>&nbsp;...\lapki-ide\resources\app.asar.unpacked\resources\modules</strong>
+      <br>
+      В&nbsp;этой папке нужно найти папку, 
+      которая соответствует названию вашей ОС,&nbsp;то&nbsp;есть&nbsp;<strong>win32</strong> для <em>Windows</em>, <strong>darwin</strong> для <em>macOS</em>&nbsp;и <strong>linux</strong> для одноимённой ОС, 
+      туда&nbsp;нужно добавить файлы <strong>avrdude</strong> (<strong>avrdude.exe</strong> для Windows) и&nbsp;<strong>avrdude.conf</strong>. 
+      После этого, при&nbsp;следующем запуске IDE, загрузчик будет автоматически использовать файлы, которые Вы&nbsp;добавили, 
+      независимо от&nbsp;системного пути. Аналогично, можно удалить эти файлы, если&nbsp;они вам больше не&nbsp;нужны, в&nbsp;таком случае, 
+      загрузчик переключится на системный путь.
     <p class="mt-3 text-bg-warning p-2">
-      <em>После установки и&nbsp;запуска avrdude Вы&nbsp;можете использовать его&nbsp;для&nbsp;программирования микроконтроллеров AVR, следуя соответствующим инструкциям и&nbsp;командам для&nbsp;вашего проекта.
-          Убедитесь, что&nbsp;ваши подключения к&nbsp;микроконтроллеру правильны и&nbsp;что&nbsp;avrdude в&nbsp;IDE начал определяться.</em>
-      <em>На&nbsp;удалённом сервере может стоять ограничение на&nbsp;то, как&nbsp;часто пользователь может запрашивать операцию обновления.</em>
+      После установки avrdude и&nbsp;перезагрузки IDE, предупреждение о&nbsp;том,&nbsp;что&nbsp;программа avrdude не&nbsp;найдена должно пропасть в&nbsp;IDE.
     </p>
   </body>
 </html>
