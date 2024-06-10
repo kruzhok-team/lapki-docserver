@@ -14,9 +14,9 @@
       01. Установка AVRDUDE
     </h1>
     <p class="mt-3 text-bg-warning p-2">
-      <strong><a href="https://github.com/avrdudes/avrdude" class="link-primary">AVRDude</a></strong> (AVR Downloader-Uploader) — кроссплатформенная свободная консольная программа, предназначенная для прошивки микроконтроллеров, таких как Arduino. Она нужна загрузчику для того, чтобы тот мог прошивать, подключённые устройства.<br>
-      Не нужно скачивать avrdude, если вы собираетесь подключиться к <b>удалённому</b> загрузчику.<br>
-      Не забудьте <b>перезагрузить</b> IDE после установки и настройки avrdude!
+      <strong><a href="https://github.com/avrdudes/avrdude" class="link-primary">AVRDude</a></strong> (AVR Downloader-Uploader)&nbsp;—&nbsp;кроссплатформенная свободная консольная программа, предназначенная для прошивки микроконтроллеров, таких как Arduino. Она нужна загрузчику для того, чтобы тот мог прошивать, подключённые устройства.<br>
+      Не нужно скачивать avrdude,&nbsp;если&nbsp;Вы&nbsp;собираетесь подключиться к&nbsp;<b>удалённому</b> загрузчику.<br>
+      Не забудьте <b>перезагрузить</b> IDE после установки и&nbsp;настройки avrdude!
     </p>
     <p class="mt-3 text-bg-success p-2">Windows</p>
     <p class="mt-3">
@@ -50,12 +50,12 @@
     </p>
     <p class="mt-3 text-bg-success p-2">MacOS</p>
     <p class="mt-3">
-      На macOS avrdude можно установить через <strong><a href="https://brew.sh/" class="link-primary">Homebrew</a></strong>, либо через <strong><a href="https://www.macports.org/" class="link-primary">MacPorts</a></strong>. 
-      В этой инструкции представлен способ установки через Homebrew:
+      На&nbsp;macOS avrdude можно установить через&nbsp;<strong><a href="https://brew.sh/" class="link-primary">Homebrew</a></strong>,&nbsp;либо&nbsp;через&nbsp;<strong><a href="https://www.macports.org/" class="link-primary">MacPorts</a></strong>. 
+      В&nbsp;этой инструкции представлен способ установки через&nbsp;Homebrew:
       <br>
       <strong>1. Открыть терминал на macOS</strong>:
       <br>
-      Терминал лежит в папке Applications/Utilities, можно найти через Finder.
+      Терминал лежит в&nbsp;папке Applications/Utilities,&nbsp;можно найти через&nbsp;Finder.
       <br>
       <strong>2. Установите Homebrew (если его нет):</strong><br>
       Откройте терминал и&nbsp;выполните следующую команду:<br>
@@ -99,16 +99,19 @@
     </p>
         <p class="mt-3 text-bg-success p-2">Добавление avrdude в папку с загрузчиком (для опытных пользователей)</p>
     <p class="mt-3">
-      Если по какой-либо причине Вы не хотите использовать системный путь, то Вы можете добавить исполняемый файл <strong>avrdude</strong> и его конфигурационный файл <strong>avrdude.conf</strong> непосредственно в папку с загрузчиком 
+      Если по&nbsp;какой-либо&nbsp;причине&nbsp;Вы не&nbsp;хотите использовать системный путь,&nbsp;то&nbsp;Вы&nbsp;можете добавить исполняемый файл <strong>avrdude</strong> и&nbsp;его конфигурационный файл <strong>avrdude.conf</strong> непосредственно в папку с загрузчиком 
       внутри Lapki-IDE. Для этого Вам понадобится открыть внутренние файлы Lapki-IDE и найти там папку modules, которая лежит по пути: 
-      <strong>...\lapki-ide\resources\app.asar.unpacked\resources\modules</strong>. В этой папке нужно найти папку, 
-      которая соответствует названию вашей ОС, то есть <strong>win32</strong> для <em>Windows</em>, <strong>darwin</strong> для <em>macOS</em> и <strong>linux</strong> для одноимённой ОС, 
-      туда нужно добавить файлы <strong>avrdude</strong> (<strong>avrdude.exe</strong> для Windows) и <strong>avrdude.conf</strong>. 
-      После этого, при следующем запуске IDE, загрузчик будет автоматически использовать файлы, которые вы добавили, 
-      независимо от системного пути. Аналогично, можно удалить эти файлы, если они вам больше не нужны, в таком случае, 
+      <br>
+      <strong>&nbsp;...\lapki-ide\resources\app.asar.unpacked\resources\modules</strong>
+      <br>
+      В&nbsp;этой папке нужно найти папку, 
+      которая соответствует названию вашей ОС,&nbsp;то&nbsp;есть&nbsp;<strong>win32</strong> для <em>Windows</em>, <strong>darwin</strong> для <em>macOS</em>&nbsp;и <strong>linux</strong> для одноимённой ОС, 
+      туда&nbsp;нужно добавить файлы <strong>avrdude</strong> (<strong>avrdude.exe</strong> для Windows) и&nbsp;<strong>avrdude.conf</strong>. 
+      После этого, при&nbsp;следующем запуске IDE, загрузчик будет автоматически использовать файлы, которые Вы&nbsp;добавили, 
+      независимо от&nbsp;системного пути. Аналогично, можно удалить эти файлы, если&nbsp;они вам больше не&nbsp;нужны, в&nbsp;таком случае, 
       загрузчик переключится на системный путь.
     <p class="mt-3 text-bg-warning p-2">
-      После установки avrdude и перезагрузки IDE, предупреждение о том, что программа avrdude не найдена должно пропасть в IDE.
+      После установки avrdude и&nbsp;перезагрузки IDE, предупреждение о&nbsp;том,&nbsp;что&nbsp;программа avrdude не&nbsp;найдена должно пропасть в&nbsp;IDE.
     </p>
   </body>
 </html>
