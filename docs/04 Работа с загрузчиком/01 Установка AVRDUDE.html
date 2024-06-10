@@ -97,9 +97,18 @@
       В&nbsp;большинстве дистрибутивов Linux в&nbsp;репозиториях программного обеспечения имеется AVRDUDE. В&nbsp;Ubuntu и&nbsp;других дистрибутивах на&nbsp;основе Debian (таких как&nbsp;Debian, Linux Mint и&nbsp;т.д.) вы&nbsp;можете ввести в&nbsp;командной строке следующую команду для&nbsp;установки AVRDUDE:
       <br><strong>sudo apt-get install avrdude</strong>
     </p>
-
+        <p class="mt-3 text-bg-success p-2">Добавление avrdude в папку с загрузчиком (для опытных пользователей)</p>
+    <p class="mt-3">
+      Если по какой-либо причине Вы не хотите использовать системный путь, то Вы можете добавить исполняемый файл <strong>avrdude</strong> и его конфигурационный файл <strong>avrdude.conf</strong> непосредственно в папку с загрузчиком 
+      внутри Lapki-IDE. Для этого Вам понадобится открыть внутренние файлы Lapki-IDE и найти там папку modules, которая лежит по пути: 
+      <strong>...\lapki-ide\resources\app.asar.unpacked\resources\modules</strong>. В этой папке нужно найти папку, 
+      которая соответствует названию вашей ОС, то есть <strong>win32</strong> для <em>Windows</em>, <strong>darwin</strong> для <em>macOS</em> и <strong>linux</strong> для одноимённой ОС, 
+      туда нужно добавить файлы <strong>avrdude</strong> (<strong>avrdude.exe</strong> для Windows) и <strong>avrdude.conf</strong>. 
+      После этого, при следующем запуске IDE, загрузчик будет автоматически использовать файлы, которые вы добавили, 
+      независимо от системного пути. Аналогично, можно удалить эти файлы, если они вам больше не нужны, в таком случае, 
+      загрузчик переключится на системный путь.
     <p class="mt-3 text-bg-warning p-2">
-      После установки avrdude и перезагрузки IDE, предупреждение о том, что avrdude не найден должно пропасть в IDE.
+      После установки avrdude и перезагрузки IDE, предупреждение о том, что программа avrdude не найдена должно пропасть в IDE.
     </p>
   </body>
 </html>
