@@ -21,12 +21,15 @@
       <li class="list-group-item">В&nbsp;диалоговом окне на&nbsp;первой вкладке выбираем схему для&nbsp;платформы <strong>Arduino Uno</strong> или&nbsp;<strong>Arduino Micro</strong>. После выбора схемы, появится <strong>поле редактирования</strong> машин состояний;</li>
       <li class="list-group-item">На&nbsp;боковой панели выберите раздел <strong>Проводник</strong> (значок в&nbsp;виде кубика);</li>
       <li class="list-group-item">В&nbsp;появившейся вкладке нажмите кнопку <strong>Добавить...</strong> Появится диалоговое окно выбора компонента;</li>
-      <li class="list-group-item">Выберите компонент <strong>LED</strong>, введите название компонента и номер пина, к которому подключен светодиод, а&nbsp;затем нажмите<strong>Добавить.</strong> В&nbsp;списке компонентов появится новый <strong>компонент</strong> с&nbsp;введённым ранее названием и&nbsp;соответствующим значком;</li>
+      <li class="list-group-item">Выберите компонент <strong>LED</strong>, введите название компонента и номер пина, к которому подключен светодиод, а&nbsp;затем нажмите <strong>Добавить.</strong> В&nbsp;списке компонентов появится новый <strong>компонент</strong> с&nbsp;введённым ранее названием и&nbsp;соответствующим значком;</li>
       <li class="list-group-item">Проделываем то&nbsp;же&nbsp;действие из&nbsp;<strong>пункта №6</strong> c&nbsp;компонентом <strong>Timer</strong>;</li>
-      <li class="list-group-item"><strong>Дважды нажимаем</strong> левой кнопкой мыши на&nbsp;поле редактирования. На&nbsp;месте клика появится <strong>новое пустое состояние</strong>;</li>
+       <li class="list-group-item">
+        <strong>Дважды нажимаем</strong> левой кнопкой мыши на&nbsp;поле редактирования. На&nbsp;месте клика появится <strong>новое пустое состояние</strong>;
+        <p class="mt-2 text-bg-success p-2"><em>При создании первого состояния рядом с&nbsp;выбранным состоянием появится элемент <strong>Синего цвета</strong>, обозначающая его&nbsp;начальным процессом машины состояний. В&nbsp;любой момент по&nbsp;нажатию на&nbsp;правую кнопку мыши на&nbsp;любое из&nbsp;состояний, вы&nbsp;можете изменить начальное состояние (<strong>Редактировать</strong>→<strong>Назначить начальным</strong>).</em></p>
+      </li>
       <li class="list-group-item">
-        <strong>Дважды нажимаем</strong> левой кнопкой мыши на&nbsp;заголовок состояния <strong>или</strong>&nbsp;один раз на&nbsp;иконку карандаша. После&nbsp;переименовываем на&nbsp;<strong>Выключен</strong> и&nbsp;нажимаем на&nbsp;клавишу <strong>Enter</strong>;
-        <p class="mt-2 text-bg-success p-2"><em>Для&nbsp;отмены переименования нажмите клавишу <strong>Esc</strong> или&nbsp;же&nbsp;<strong>нажмите</strong> левой кнопкой мыши за&nbsp;пределами заголовка состояния.</em></p>
+        <strong>Дважды нажимаем</strong> левой кнопкой мыши на&nbsp;заголовок состояния <strong>или</strong>&nbsp;один раз на&nbsp;иконку карандаша. После&nbsp;переименуйте состояние на&nbsp;<strong>Выключен</strong> и&nbsp;нажимите на&nbsp;клавишу <strong>Enter</strong>, либо <strong>нажмите</strong> левой кнопкой мыши за&nbsp;пределами заголовка состояния;
+        <p class="mt-2 text-bg-success p-2"><em>Для&nbsp;отмены переименования нажмите клавишу <strong>Esc</strong>.</em></p>
       </li>
       <li class="list-group-item">Под&nbsp;заголовком <strong>дважды</strong> нажимаем левой кнопкой мыши на&nbsp;пустую область состояния. Появится диалоговое окно для&nbsp;выбора нового события и&nbsp;его&nbsp;действий;</li>
       <li class="list-group-item">Вверху в&nbsp;левом выпадающем списке выберите событие <strong>System</strong>, а&nbsp;в&nbsp;правом выпадающем списке действие <strong>onEnter</strong>.</li>
@@ -42,7 +45,7 @@
       <li class="list-group-item"><strong>Зажмите</strong> левой кнопкой мыши любое Ваше созданное действие в&nbsp;списке раздела <strong>Делай</strong> и&nbsp;перенесите его&nbsp;поверх другого действия. После&nbsp;чего&nbsp;они&nbsp;поменяются местами.</li>
       <li class="list-group-item">
         Создайте ещё&nbsp;одно состояние самостоятельно, но&nbsp;с&nbsp;такими свойствами: Имя&nbsp;— <strong>Включен</strong>, Событие&nbsp;— <strong>System → onEnter</strong>, Действия&nbsp;— <strong>LED1 → on, Timer → Start(1000)</strong>;
-        <p class="mt-2 text-bg-success p-2"><em>Для&nbsp;быстрого создание подобного состояния, выберите уже&nbsp;созданое состояние и&nbsp;нажмите сочетание клавиш <strong>Ctrl+C</strong>, а&nbsp;затем&nbsp;<strong>Ctrl+V</strong>. Поверх копируемого состояние появится его&nbsp;копия, нажмите на&nbsp;неё&nbsp;один раз&nbsp;и&nbsp;перенесите его&nbsp;в&nbsp;сторону, чтобы&nbsp;оба&nbsp;состояния были&nbsp;<strong>видны</strong> в&nbsp;редакторе.</em></p>
+        <p class="mt-2 text-bg-success p-2"><em>Для&nbsp;быстрого создания подобного состояния, выберите уже&nbsp;созданое состояние и&nbsp;нажмите сочетание клавиш <strong>Ctrl+C</strong>, а&nbsp;затем&nbsp;<strong>Ctrl+V</strong>. Поверх копируемого состояния появится его&nbsp;копия, нажмите на&nbsp;неё&nbsp;один раз&nbsp;и&nbsp;перенесите её&nbsp;в&nbsp;сторону, чтобы&nbsp;оба&nbsp;состояния были&nbsp;<strong>видны</strong> в&nbsp;редакторе.</em></p>
       </li>
       <li class="list-group-item">Если&nbsp;вы&nbsp;создали состояние с&nbsp;нуля, то&nbsp;переходите к&nbsp;следующему шагу, если&nbsp;же&nbsp;вы&nbsp;создали копию, то&nbsp;переименуйте её&nbsp;на&nbsp;<strong>Включен</strong>. Затем&nbsp;<strong>дважды</strong> нажмите на&nbsp;событие и&nbsp;выберите <strong>System → onEnter</strong>, потом&nbsp;так&nbsp;же&nbsp;измените действие <strong>LED1 → off</strong> на&nbsp;<strong>LED1 → on</strong></li>
       <li class="list-group-item">Нажмите <strong>правой кнопкой мыши</strong> по&nbsp;последнему созданному состоянию и&nbsp;в&nbsp;появившемся контекстном меню выберите раздел <strong>Редактирование.</strong>, затем&nbsp;<strong>Назначить начальным.</strong> Рядом с&nbsp;выбранным состоянием появится элемент с&nbsp;названием <strong>Начало</strong>, обозначающая его&nbsp;начальным процессом машины состояний;</li>
@@ -50,7 +53,7 @@
       <li class="list-group-item">В&nbsp;появившемся окне выберите событие <strong>Timer → timeout</strong>. Нажмите на&nbsp;кнопку <strong>Сохранить</strong>;</li>
       <li class="list-group-item">
         Создайте теперь в&nbsp;точности такой же&nbsp;переход, но&nbsp;уже&nbsp;в&nbsp;обратную сторону(от&nbsp;обычного состояния до&nbsp;начального);
-        <p class="mt-2 text-bg-success p-2"><em>Как&nbsp;и&nbsp;состояние, вы&nbsp;можете сделать копию перехода, нажав по&nbsp;очереди <strong>Ctrl+C</strong>, <strong>Ctrl+V</strong>, затем&nbsp;через&nbsp;контекстное меню поменять <strong>исход и&nbsp;цель (начало и&nbsp;конец)</strong>.</em></p>
+        <p class="mt-2 text-bg-success p-2"><em>Как&nbsp;и&nbsp;состояние, вы&nbsp;можете сделать копию перехода, нажав по&nbsp;очереди <strong>Ctrl+C</strong>, <strong>Ctrl+V</strong>, затем&nbsp;через&nbsp;контекстное меню (открывается&nbsp;по нажатию&nbsp;на правую кнопку мыши) можно поменять <strong>исход и&nbsp;цель (начало и&nbsp;конец)</strong>.</em></p>
       </li>
       <li class="list-group-item">
         Для&nbsp;просмотра кода Вашей машины состояния нажмите <strong>правой кнопкой мыши</strong> на&nbsp;пустом пространстве поля редактора, в&nbsp;появившемся контекстном меню выберите <strong>Посмотреть код.</strong> Код машины состояний появится в&nbsp;<strong>новой вкладке</strong> и&nbsp;автоматически перевёд Вас&nbsp;на&nbsp;неё;
@@ -59,11 +62,11 @@
       <li class="list-group-item">Подключите плату <strong>Arduino Uno</strong> или&nbsp;<strong>Arduino Micro</strong> к&nbsp;компьютеру;</li>
       <li class="list-group-item">
         Прежде чем скомпилировать схему научимся добавлять <strong>заметки</strong>;
-        <p class="mt-2 text-bg-success p-2"><em>При&nbsp;нажатии <strong>правой кнопкой мыши</strong> на&nbsp;пустом пространстве поля редактирования, в&nbsp;появившемся контекстном меню выберите <strong>Добавить заметку</strong>, после чего на&nbsp;поле редактирования появится небольшой объект, в&nbsp;котором можно написать свою <strong>заметку(комментарий)</strong>.</em></p>
+        <p class="mt-2 text-bg-success p-2"><em>При&nbsp;нажатии <strong>правой кнопкой мыши</strong> на&nbsp;пустом пространстве поля редактирования, в&nbsp;появившемся контекстном меню выберите <strong>Добавить заметку</strong>, после чего на&nbsp;поле редактирования появится небольшой объект, в&nbsp;котором можно написать свою <strong>заметку (комментарий)</strong>.</em></p>
       </li>
       <li class="list-group-item">
         На&nbsp;боковой панели выберите раздел <strong>Компилятор</strong>;
-        <p class="mt-2 text-bg-success p-2"><em>Если&nbsp;вы&nbsp;не&nbsp;успеваете доделать схему до&nbsp;компиляции, то&nbsp;на&nbsp;левой панели нажмите на&nbsp;кнопку <strong>Меню</strong>. В&nbsp;появившейся вкладке нажимаем на&nbsp;<strong>Сохранить как...</strong>. Позже через меню вы&nbsp;можете <strong>открыть</strong> незаконченную схему.</em></p>
+        <p class="mt-2 text-bg-success p-2"><em>Если&nbsp;вы&nbsp;не&nbsp;успеваете доделать схему до&nbsp;компиляции, то&nbsp;на&nbsp;левой панели нажмите на&nbsp;кнопку <strong>Меню</strong>. В&nbsp;появившейся вкладке нажимаем на&nbsp;<strong>Сохранить&nbsp;как...</strong> или <strong>Сохранить</strong>. Позже через меню вы&nbsp;можете <strong>открыть</strong> незаконченную схему.</em></p>
       </li>
       <li class="list-group-item">
         В&nbsp;разделе компилятора нажмите на&nbsp;кнопку <strong>Скомпилировать</strong>;
@@ -72,7 +75,7 @@
         </p>
       </li>
       <li class="list-group-item">
-        Чтобы <strong> сохранить </strong> бинарный код схемы для&nbsp;Arduino, для&nbsp;этого нажмите на&nbsp;кнопку <strong>Сохранить результат</strong> в&nbsp;разделе <strong>Компилятор</strong>;
+        Чтобы <strong> сохранить </strong> бинарный код схемы для&nbsp;Arduino, нажмите на&nbsp;кнопку <strong>Сохранить результат</strong> в&nbsp;разделе <strong>Компилятор</strong>;
         <p class="mt-2 text-bg-success p-2"><em>Так&nbsp;же&nbsp;вы&nbsp;можете посмотреть код в&nbsp;отдельной вкладке нажав на&nbsp;кнопку <strong>Показать код</strong>. А&nbsp;чтобы скачать – нажмите кнопку <strong> Сохранить код</strong> и&nbsp;выберите папку для&nbsp;сохранения</em>.</p>
       </li>
       <p class="mt-3 text-bg-success p-2"><em>Машина состояний, которая в результате должна получиться:</em></p>
