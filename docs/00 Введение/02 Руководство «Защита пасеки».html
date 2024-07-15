@@ -25,7 +25,7 @@
       <li class="list-group-item">Проделываем то&nbsp;же&nbsp;действие из&nbsp;<strong>пункта №6</strong> c&nbsp;компонентом <strong>АнализаторЦели, МодульДвижения, ОружиеЦелевое</strong>;</li>
       <li class="list-group-item">
         <strong>Дважды нажимаем</strong> левой кнопкой мыши на&nbsp;поле редактирования. На&nbsp;месте клика появится <strong>новое пустое состояние</strong>;
-        <p class="mt-2 text-bg-success p-2"><em>При создании первого состояния рядом с&nbsp;выбранным состоянием появится элемент <strong>Синего цвета</strong>, обозначающая его&nbsp;начальным процессом машины состояний. В&nbsp;любой момент по&nbsp;нажатию на&nbsp;правую кнопку мыши на&nbsp;любое из&nbsp;состояний, вы&nbsp;можете изменить начальное состояние.</em></p>
+        <p class="mt-2 text-bg-success p-2"><em>При создании первого состояния рядом с&nbsp;выбранным состоянием появится элемент <strong>Синего цвета</strong>, обозначающая его&nbsp;начальным процессом машины состояний. В&nbsp;любой момент по&nbsp;нажатию на&nbsp;правую кнопку мыши на&nbsp;любое из&nbsp;состояний, вы&nbsp;можете изменить начальное состояние (<strong>Редактировать</strong>→<strong>Назначить начальным</strong>).</em></p>
       </li>
       <li class="list-group-item">
         <strong>Добавьте</strong> ещё&nbsp;<strong>три</strong> состояния;
@@ -36,7 +36,8 @@
         <p class="mt-2 text-bg-success p-2"><em>Для&nbsp;отмены переименования нажмите клавишу <strong>Esc</strong></em></p>
       </li>
       <li class="list-group-item"><strong>Переименуйте</strong> остальные состояния на&nbsp;<strong>Скан, Сближение, Атака</strong>;</li>
-      <li class="list-group-item">Под&nbsp;заголовком состояния <strong>Бой</strong>, <strong>дважды</strong> нажимаем левой кнопкой мыши на&nbsp;пустую область состояния. Появится диалоговое окно для&nbsp;выбора нового события и&nbsp;его&nbsp;действий;</li>
+      <li class="list-group-item">Назначьте <strong>Скан</strong> начальным состоянием. Для этого, нажмите правой кнопкой мыши на состояние <strong>Скан</strong> и выберите&nbsp;в появившемся меню опцию <strong>Редактировать</strong>→<strong>Назначить начальным</strong>;</li>
+      <li class="list-group-item">Под&nbsp;заголовком состояния <strong>Скан</strong>, <strong>дважды</strong> нажимаем левой кнопкой мыши на&nbsp;пустую область состояния. Появится диалоговое окно для&nbsp;выбора нового события и&nbsp;его&nbsp;действий;</li>
       <li class="list-group-item">Вверху в&nbsp;левом выпадающем списке выберите событие <strong>System</strong>, а&nbsp;в&nbsp;правом выпадающем списке действие <strong>onEnter</strong>.</li>
       <li class="list-group-item">
         Теперь нажмите кнопку с&nbsp;<strong>плюсом</strong> справа от&nbsp;области <strong>Делай</strong>. В&nbsp;диалоговом окне выберите действие <strong>Сенсор → ПоискВрагаПоДистанции</strong>, а&nbsp;в&nbsp;появившемся ниже блоке <strong>Направление&nbsp;поиска</strong> выберите <strong>мин</strong>. Нажмите <strong>Сохранить</strong>;
@@ -50,16 +51,17 @@
       <li class="list-group-item">Дважды нажмите на&nbsp;состояние с&nbsp;уже&nbsp;созданным событием,&nbsp;в&nbsp;диалоговом окне создайте ещё&nbsp;одно событие <strong>System → onExit</strong> и&nbsp;добавьте действие <strong>Сенсор → ОстановкаПоиска</strong>;</li>
       <li class="list-group-item">Нажмите дважды на&nbsp;состояние с&nbsp;наименованием <strong>Сближение</strong>,&nbsp;в&nbsp;диалоговом окне создайте событие <strong>System → onEnter</strong> и&nbsp;добавьте действие <strong>МодульДвижения → ДвигатьсяКЦели</strong>;</li>
       <li class="list-group-item">Нажмите дважды на&nbsp;состояние с&nbsp;наименованием <strong>Атака</strong>,&nbsp;в&nbsp;диалоговом окне создайте событие <strong>System → onEnter</strong> и&nbsp;добавьте действие <strong>ОружиеЦелевое → АтаковатьЦель</strong>;</li>
-      <li class="list-group-item">
+      <li class="list-group-item"><strong>Зажмите</strong> левой кнопкой мыши состояние с&nbsp;наименованием <strong>Сближение</strong>,&nbsp;перенесите его&nbsp;поверх состояния <strong>Бой</strong> и&nbsp;продержите так&nbsp;две&nbsp;секунды, затем&nbsp;отожмите мышку. Состояние сперва выделится синим цветом, затем&nbsp;после&nbsp;отпускания мышки состояние с&nbsp;наименованием <strong>Сближение</strong> окажется внутри состояния <strong>Бой</strong>;</li>
+         <li class="list-group-item">
         <strong>Зажмите</strong> левой кнопкой мыши состояние с&nbsp;наименованием <strong>Сближение</strong>,&nbsp;перенесите его&nbsp;поверх состояния <strong>Бой</strong> и&nbsp;продержите так&nbsp;две&nbsp;секунды, затем&nbsp;отожмите мышку. Состояние сперва выделится синим цветом, затем&nbsp;после&nbsp;отпускания мышки через&nbsp;две&nbsp;секунды состояние с&nbsp;наименованием <strong>Сближение</strong> окажется внутри состояния <strong>Бой</strong>;
-        <p class="mt-2 text-bg-success p-2"><em>Чтобы&nbsp;вытащить состояния из&nbsp;другого достаточно зажать левой кнопкой мыши внутреннее состояние и&nbsp;слегка отвести в&nbsp;сторону. После&nbsp;чего&nbsp;продержать мышку так&nbsp;же&nbsp;две&nbsp;секунды и&nbsp;состояние тут&nbsp;окажется независимым.</em></p>
+        <p class="mt-2 text-bg-success p-2"><em>Чтобы&nbsp;вытащить состояния из&nbsp;другого достаточно зажать левой кнопкой мыши внутреннее состояние и&nbsp;слегка отвести в&nbsp;сторону. После&nbsp;чего&nbsp;продержать мышку две&nbsp;секунды и&nbsp;состояние тут&nbsp;же окажется независимым.</em></p>
       </li>
-
-      <li class="list-group-item">Наведитесь <strong>курсором</strong> на&nbsp;состояние с&nbsp;наименованием <strong>Атака</strong> и&nbsp;нажмите на&nbsp;него&nbsp;один раз, затем переведите курсор на&nbsp;появившуюся на&nbsp;рамке состояния иконку со&nbsp;знаком&nbsp;<strong>плюс</strong> и&nbsp;потяните до&nbsp;другого состояния. Появится диалоговое окно для&nbsp;редактирования нового перехода (условия);</li>
+      <li class="list-group-item">Переместите состояние <strong>Атака</strong> внутрь состояния <strong>Бой</strong>;</li>
+      <li class="list-group-item">Наведитесь <strong>курсором</strong> на&nbsp;состояние с&nbsp;наименованием <strong>Атака</strong> и&nbsp;нажмите на&nbsp;него&nbsp;один раз, затем переведите курсор на&nbsp;появившуюся на&nbsp;рамке состояния иконку со&nbsp;знаком&nbsp;<strong>плюс</strong> и&nbsp;потяните до&nbsp;состояния с названием <strong>Сближение</strong>. Появится диалоговое окно для&nbsp;редактирования нового перехода (условия);</li>
       <li class="list-group-item">В&nbsp;появившемся окне выберите событие <strong>ОружиеЦелевое → ЦельВышлаИзЗоныАтаки</strong>. Нажмите на&nbsp;кнопку <strong>Сохранить</strong>;</li>
       <li class="list-group-item">
         Создайте теперь в&nbsp;точности такой же&nbsp;переход, но&nbsp;уже&nbsp;в&nbsp;обратную сторону(от&nbsp;состояния <strong>Cближение</strong> до&nbsp;состояние <strong>Атака</strong>) и&nbsp;с&nbsp;событием <strong>ОружиеЦелевое → ЦельВошлаВЗонуАтаки</strong>;
-        <p class="mt-2 text-bg-success p-2"><em>Как&nbsp;и&nbsp;состояние, вы&nbsp;можете сделать копию перехода, нажав по&nbsp;очереди <strong>Ctrl+C</strong>, <strong>Ctrl+V</strong>, затем&nbsp;через&nbsp;контекстное меню поменять <strong>исход и&nbsp;цель (начало и&nbsp;конец)</strong>.</em></p>
+        <p class="mt-2 text-bg-success p-2"><em>Как&nbsp;и&nbsp;состояние, вы&nbsp;можете сделать копию перехода, нажав по&nbsp;очереди <strong>Ctrl+C</strong>, <strong>Ctrl+V</strong>, затем&nbsp;через&nbsp;контекстное меню (открывается&nbsp;по нажатию&nbsp;на правую кнопку мыши) можно поменять <strong>исход и&nbsp;цель (начало и&nbsp;конец)</strong>.</em></p>
       </li>
       <li class="list-group-item">Теперь самостоятельно создайте ещё три перехода. Сперва от&nbsp;состояния <strong>Скан</strong> до&nbsp;состояния <strong>Сближение</strong> с&nbsp;событием <strong>Сенсор → ЦельПолучена</strong>, потом переход от&nbsp;состояния <strong>Бой</strong> до&nbsp;<strong>Скан</strong> с событием <strong>АнализаторЦели → ЦельПотеряна</strong>, затем от&nbsp;состояния <strong>Бой</strong> до&nbsp;<strong>Скан</strong> с&nbsp;событием <strong>АнализаторЦели → ЦельУничтожена</strong>;</li>
       <li class="list-group-item">
