@@ -97,21 +97,5 @@
       В&nbsp;большинстве дистрибутивов Linux в&nbsp;репозиториях программного обеспечения имеется AVRDude. В&nbsp;Ubuntu и&nbsp;других дистрибутивах на&nbsp;основе Debian (таких как&nbsp;Debian, Linux Mint и&nbsp;т.д.) Вы&nbsp;можете ввести в&nbsp;командной строке следующую команду для&nbsp;установки AVRDude:
       <br><strong>sudo apt-get install avrdude</strong>
     </p>
-        <p class="mt-3 text-bg-success p-2">Добавление AVRDude в&nbsp;папку с&nbsp;загрузчиком (для&nbsp;опытных пользователей)</p>
-    <p class="mt-3">
-      Если по&nbsp;какой-либо&nbsp;причине&nbsp;Вы не&nbsp;хотите использовать системный путь, то&nbsp;Вы&nbsp;можете добавить исполняемый файл <strong>AVRDude</strong> и&nbsp;его конфигурационный файл <strong>avrdude.conf</strong> непосредственно в&nbsp;папку с&nbsp;загрузчиком 
-      внутри Lapki-IDE. Для&nbsp;этого Вам понадобится открыть внутренние файлы Lapki-IDE и&nbsp;найти там&nbsp;папку modules, которая лежит по&nbsp;пути: 
-      <br>
-      <strong>&nbsp;...\lapki-ide\resources\app.asar.unpacked\resources\modules</strong>
-      <br>
-      В&nbsp;этой папке нужно найти папку, 
-      которая соответствует названию вашей ОС, то&nbsp;есть&nbsp;<strong>win32</strong> для&nbsp;<em>Windows</em>, <strong>darwin</strong> для&nbsp;<em>macOS</em> и&nbsp;<strong>linux</strong> для&nbsp;одноимённой ОС, 
-      туда нужно добавить файлы <strong>AVRDude</strong> (<strong>avrdude.exe</strong> для&nbsp;Windows) и&nbsp;<strong>avrdude.conf</strong>. 
-      После этого, при&nbsp;следующем запуске IDE, загрузчик будет автоматически использовать файлы, которые Вы&nbsp;добавили, 
-      независимо от&nbsp;системного пути. Аналогично, можно удалить эти файлы, если&nbsp;они Вам больше не&nbsp;нужны, в&nbsp;таком случае, 
-      загрузчик переключится на&nbsp;системный путь.
-    <p class="mt-3 text-bg-warning p-2">
-      После установки AVRDude и&nbsp;перезагрузки IDE, предупреждение о&nbsp;том,&nbsp;что&nbsp;программа AVRDude не&nbsp;найдена должно пропасть в&nbsp;IDE.
-    </p>
   </body>
 </html>
