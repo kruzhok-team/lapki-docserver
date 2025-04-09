@@ -2,100 +2,165 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>09. Установка AVRDude</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
   </head>
   <body class="mx-3">
     <span class="badge text-wrap text-bg-primary mt-3">
       05. Работа с&nbsp;загрузчиком
     </span>
-    <h1 class="display-6 mt-3">
-      09. Установка AVRDude
-    </h1>
+    <h1 class="display-6 mt-3">09. Установка AVRDude</h1>
     <p class="mt-3 text-bg-warning p-2">
-      <strong><a href="https://github.com/avrdudes/avrdude" class="link-primary">AVRDude</a></strong> (AVR Downloader-Uploader)&nbsp;—&nbsp;кроссплатформенная свободная консольная программа, предназначенная для&nbsp;прошивки микроконтроллеров, таких как&nbsp;Arduino. Она нужна загрузчику для&nbsp;того, чтобы тот&nbsp;мог прошивать, подключённые устройства.<br>
-      Не&nbsp;нужно скачивать AVRDude, если&nbsp;Вы&nbsp;собираетесь подключиться к&nbsp;<b>удалённому</b> загрузчику, либо Вы собираетесь работать с <strong>МС-ТЮК</strong>.<br>
-      Не&nbsp;забудьте <b>перезагрузить</b> IDE после установки и&nbsp;настройки AVRDude!
+      <strong
+        ><a href="https://github.com/avrdudes/avrdude" class="link-primary"
+          >AVRDude</a
+        ></strong
+      >
+      (AVR Downloader-Uploader)&nbsp;—&nbsp;кроссплатформенная свободная
+      консольная программа, предназначенная для&nbsp;прошивки микроконтроллеров,
+      таких как&nbsp;Arduino. Она нужна загрузчику для&nbsp;того, чтобы
+      тот&nbsp;мог прошивать, подключённые устройства.<br />
+      Не&nbsp;нужно скачивать AVRDude, если&nbsp;Вы&nbsp;собираетесь
+      подключиться к&nbsp;<b>удалённому</b> загрузчику, либо Вы собираетесь
+      работать с <strong>МС-ТЮК</strong>.<br />
+      Не&nbsp;забудьте <b>перезагрузить</b> IDE после установки и&nbsp;настройки
+      AVRDude!
     </p>
     <p class="mt-3 text-bg-success p-2">Windows</p>
     <p class="mt-3">
-      <strong>1. Скачайте AVRDude:</strong><br>
-      Перейдите на&nbsp;официальный репозиторий проекта <strong><a href="https://github.com/avrdudes/avrdude/releases" class="link-primary">AVRDude</a></strong>, 
-      пролистайте страницу вниз и&nbsp;найдите раздел под&nbsp;названием <strong>"Assets"</strong>, если ниже отсутствует список файлов, то&nbsp;нажмите на&nbsp;<strong>"Assets"</strong>, чтобы <strong>показать список файлов</strong>.<br>
-      Затем в&nbsp;списке нажмите на&nbsp;файл, который заканчивается на <strong>windows-x64.zip</strong>, если у&nbsp;Вас архитектура процессора компьютера <strong>x64</strong>, иначе <strong>windows-x86.zip</strong>, если архитектура <strong>x86</strong> или&nbsp;<strong>x32</strong>.
+      <strong>1. Скачайте AVRDude:</strong><br />
+      Перейдите на&nbsp;официальный репозиторий проекта
+      <strong
+        ><a
+          href="https://github.com/avrdudes/avrdude/releases"
+          class="link-primary"
+          >AVRDude</a
+        ></strong
+      >, пролистайте страницу вниз и&nbsp;найдите раздел под&nbsp;названием
+      <strong>"Assets"</strong>, если ниже отсутствует список файлов,
+      то&nbsp;нажмите на&nbsp;<strong>"Assets"</strong>, чтобы
+      <strong>показать список файлов</strong>.<br />
+      Затем в&nbsp;списке нажмите на&nbsp;файл, который заканчивается на
+      <strong>windows-x64.zip</strong>, если у&nbsp;Вас архитектура процессора
+      компьютера <strong>x64</strong>, иначе <strong>windows-x86.zip</strong>,
+      если архитектура <strong>x86</strong> или&nbsp;<strong>x32</strong>.
     </p>
     <p class="mt-3">
-      <strong>2. Разархивируйте архив:</strong><br>
-      После&nbsp;завершения загрузки разархивируйте скачанный архив с&nbsp;avrdude в&nbsp;удобном для&nbsp;Вас месте на&nbsp;компьютере.
+      <strong>2. Разархивируйте архив:</strong><br />
+      После&nbsp;завершения загрузки разархивируйте скачанный архив
+      с&nbsp;avrdude в&nbsp;удобном для&nbsp;Вас месте на&nbsp;компьютере.
     </p>
     <p class="mt-3">
-      <strong>3. Добавьте AVRDude в&nbsp;переменные среды (необязательно, если Вы собираетесь добавить исполняемый файл в&nbsp;папку с&nbsp;загрузчиком):</strong><br>
-      Найдите и&nbsp;скопируйте путь к&nbsp;распакованной папке AVRDude.<br>
-      Откройте командную строку от&nbsp;<strong>прав администратора</strong>.<br>
-      Используйте команду <strong>setx</strong> для&nbsp;добавления пути к&nbsp;папке в&nbsp;переменную PATH. Например, чтобы&nbsp;добавить путь: <strong>d:\avrdude</strong>:<br>
-      <strong>setx PATH "%PATH%;D:\avrdude"</strong>, где  <strong>D:\avrdude</strong> - это&nbsp;путь к&nbsp;вашему файлу <strong>avrdude.exe</strong>.<br>
-      <p class="mt-3 text-bg-warning p-2">Это&nbsp;позволит Вам использовать AVRDude из&nbsp;любого места в&nbsp;командной строке без&nbsp;необходимости указывать полный путь к&nbsp;исполняемому файлу.</p>
+      <strong
+        >3. Добавьте AVRDude в&nbsp;переменные среды (необязательно, если Вы
+        собираетесь добавить исполняемый файл в&nbsp;папку
+        с&nbsp;загрузчиком):</strong
+      ><br />
+      Найдите и&nbsp;скопируйте путь к&nbsp;распакованной папке AVRDude.<br />
+      Откройте командную строку от&nbsp;<strong>прав администратора</strong
+      >.<br />
+      Используйте команду <strong>setx</strong> для&nbsp;добавления пути
+      к&nbsp;папке в&nbsp;переменную PATH. Например, чтобы&nbsp;добавить путь:
+      <strong>d:\avrdude</strong>:<br />
+      <strong>setx PATH "%PATH%;D:\avrdude"</strong>, где
+      <strong>D:\avrdude</strong> - это&nbsp;путь к&nbsp;вашему файлу
+      <strong>avrdude.exe</strong>.<br />
+    </p>
+    <p class="mt-3 text-bg-warning p-2">
+      Это&nbsp;позволит Вам использовать AVRDude из&nbsp;любого места
+      в&nbsp;командной строке без&nbsp;необходимости указывать полный путь
+      к&nbsp;исполняемому файлу.
     </p>
     <p class="mt-3">
-      <strong>4. Протестируйте установку:</strong><br>
-      Откройте командную строку.<br>
-      Если Вы&nbsp;добавили путь в&nbsp;переменную среды PATH, то&nbsp;в&nbsp;командной строке введите <strong>avrdude</strong> и&nbsp;нажмите Enter.
-      В&nbsp;командной строке должна появиться информация о&nbsp;программе, что&nbsp;означает успешную установку и&nbsp;работу AVRDude.<br>
-      <p class="mt-3 text-bg-warning p-2">
-        Если Вы не&nbsp;добавляли путь AVRDude в&nbsp;переменную среды PATH, то&nbsp;введите команду:<br>
-        <strong>cd D:\avrdude</strong>, где&nbsp;<strong>D:\avrdude</strong> - это&nbsp;путь к&nbsp;вашему файлу <strong>avrdude.exe</strong>.<br>
-        После чего в&nbsp;командной строке введите <strong>avrdude</strong> и&nbsp;нажмите Enter, если&nbsp;вывелась информация о&nbsp;AVRDude, значит программа успешно установлена и&nbsp;работает.<br>
-      </p>
+      <strong>4. Протестируйте установку:</strong><br />
+      Откройте командную строку.<br />
+      Если Вы&nbsp;добавили путь в&nbsp;переменную среды PATH,
+      то&nbsp;в&nbsp;командной строке введите
+      <strong>avrdude</strong> и&nbsp;нажмите Enter. В&nbsp;командной строке
+      должна появиться информация о&nbsp;программе, что&nbsp;означает успешную
+      установку и&nbsp;работу AVRDude.<br />
+    </p>
+    <p class="mt-3 text-bg-warning p-2">
+      Если Вы не&nbsp;добавляли путь AVRDude в&nbsp;переменную среды PATH,
+      то&nbsp;введите команду:<br />
+      <strong>cd D:\avrdude</strong>, где&nbsp;<strong>D:\avrdude</strong> -
+      это&nbsp;путь к&nbsp;вашему файлу <strong>avrdude.exe</strong>.<br />
+      После чего в&nbsp;командной строке введите
+      <strong>avrdude</strong> и&nbsp;нажмите Enter, если&nbsp;вывелась
+      информация о&nbsp;AVRDude, значит программа успешно установлена
+      и&nbsp;работает.<br />
     </p>
     <p class="mt-3 text-bg-success p-2">MacOS</p>
     <p class="mt-3">
-      На&nbsp;macOS AVRDude можно установить через&nbsp;<strong><a href="https://brew.sh/" class="link-primary">Homebrew</a></strong>, либо&nbsp;через&nbsp;<strong><a href="https://www.macports.org/" class="link-primary">MacPorts</a></strong>. 
-      В&nbsp;этой инструкции представлен способ установки через&nbsp;Homebrew:
-      <br>
+      На&nbsp;macOS AVRDude можно установить через&nbsp;<strong
+        ><a href="https://brew.sh/" class="link-primary">Homebrew</a></strong
+      >, либо&nbsp;через&nbsp;<strong
+        ><a href="https://www.macports.org/" class="link-primary"
+          >MacPorts</a
+        ></strong
+      >. В&nbsp;этой инструкции представлен способ установки
+      через&nbsp;Homebrew:
+      <br />
       <strong>1. Открыть терминал на macOS</strong>:
-      <br>
-      Терминал лежит в&nbsp;папке Applications/Utilities, можно найти через&nbsp;Finder.
-      <br>
-      <strong>2. Установите Homebrew (если его нет):</strong><br>
-      Откройте терминал и&nbsp;выполните следующую команду:<br>
+      <br />
+      Терминал лежит в&nbsp;папке Applications/Utilities, можно найти
+      через&nbsp;Finder.
+      <br />
+      <strong>2. Установите Homebrew (если его нет):</strong><br />
+      Откройте терминал и&nbsp;выполните следующую команду:<br />
 
-      <strong>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</strong><br>
+      <strong
+        >/bin/bash -c "$(curl -fsSL
+        https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</strong
+      ><br />
     </p>
     <p class="mt-3">
-      <strong>3. Установите AVRDude:</strong><br>
-      В&nbsp;терминале выполните команду:<br>
+      <strong>3. Установите AVRDude:</strong><br />
+      В&nbsp;терминале выполните команду:<br />
 
       <strong>brew install avrdude</strong>
     </p>
     <p class="mt-3">
-      <strong>4. Протестируйте установку:</strong><br>
-      После установки AVRDude Вы&nbsp;можете запустить его&nbsp;из&nbsp;терминала, введя команду <strong>avrdude</strong>.
+      <strong>4. Протестируйте установку:</strong><br />
+      После установки AVRDude Вы&nbsp;можете запустить
+      его&nbsp;из&nbsp;терминала, введя команду <strong>avrdude</strong>.
     </p>
     <p class="mt-3 text-bg-success p-2">Linux (Ubuntu/Debian)</p>
     <p class="mt-3">
-      <strong>1. Установите AVRDude:</strong><br>
-      Откройте терминал и&nbsp;выполните команды:<br>
-      <strong>sudo apt-get update</strong><br>
+      <strong>1. Установите AVRDude:</strong><br />
+      Откройте терминал и&nbsp;выполните команды:<br />
+      <strong>sudo apt-get update</strong><br />
       <strong>sudo apt-get install avrdude</strong>
     </p>
     <p class="mt-3">
-      <strong>2. Запустите AVRDude:</strong><br>
-      После установки AVRDude Вы&nbsp;можете запустить его&nbsp;из&nbsp;терминала, введя команду <strong>avrdude</strong>.
+      <strong>2. Запустите AVRDude:</strong><br />
+      После установки AVRDude Вы&nbsp;можете запустить
+      его&nbsp;из&nbsp;терминала, введя команду <strong>avrdude</strong>.
     </p>
     <p class="mt-3 text-bg-success p-2">Linux (Fedora)</p>
     <p class="mt-3">
-      <strong>1. Установите AVRDude:</strong><br>
-      Откройте терминал и&nbsp;выполните команды:<br>
+      <strong>1. Установите AVRDude:</strong><br />
+      Откройте терминал и&nbsp;выполните команды:<br />
       <strong>sudo dnf install avrdude</strong>
     </p>
     <p class="mt-3">
-      <strong>2. Запустите AVRDude:</strong><br>
-      После установки AVRDude Вы&nbsp;можете запустить его&nbsp;из&nbsp;терминала, введя команду <strong>avrdude</strong>.
+      <strong>2. Запустите AVRDude:</strong><br />
+      После установки AVRDude Вы&nbsp;можете запустить
+      его&nbsp;из&nbsp;терминала, введя команду <strong>avrdude</strong>.
     </p>
     <p class="mt-3 text-bg-warning p-2">
-      В&nbsp;большинстве дистрибутивов Linux в&nbsp;репозиториях программного обеспечения имеется AVRDude. В&nbsp;Ubuntu и&nbsp;других дистрибутивах на&nbsp;основе Debian (таких как&nbsp;Debian, Linux Mint и&nbsp;т.д.) Вы&nbsp;можете ввести в&nbsp;командной строке следующую команду для&nbsp;установки AVRDude:
-      <br><strong>sudo apt-get install avrdude</strong>
+      В&nbsp;большинстве дистрибутивов Linux в&nbsp;репозиториях программного
+      обеспечения имеется AVRDude. В&nbsp;Ubuntu и&nbsp;других дистрибутивах
+      на&nbsp;основе Debian (таких как&nbsp;Debian, Linux Mint и&nbsp;т.д.)
+      Вы&nbsp;можете ввести в&nbsp;командной строке следующую команду
+      для&nbsp;установки AVRDude:
+      <br /><strong>sudo apt-get install avrdude</strong>
     </p>
   </body>
 </html>
