@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>00. Вкладка монитора порта</title>
+    <title id="title"></title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -12,10 +12,8 @@
     />
   </head>
   <body class="mx-3">
-    <span class="badge text-wrap text-bg-primary mt-3">
-      03. Интерфейс среды → 03. Загрузчик → 07. Работа с&nbsp;монитором порта
-    </span>
-    <h1 class="display-6 mt-3">00. Вкладка монитора порта</h1>
+    <div id="parentName"></div>
+    <div id="header"></div>
     <p class="mt-3">
       Модуль монитора порта предназначен для&nbsp;принятия или&nbsp;отправки
       различных данных на&nbsp;<strong>последовательный порт</strong>.
@@ -38,5 +36,10 @@
         как&nbsp;отправить сообщение на&nbsp;последовательный порт.
       </li>
     </ol>
+
+    <script src="../../../../scripts/index.js"></script>
+    <script>
+      autoNumeration(location.pathname);
+    </script>
   </body>
 </html>
