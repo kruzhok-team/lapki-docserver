@@ -10,7 +10,7 @@ function getParentName(decodedURI) {
   const endPosition = decodedURI.lastIndexOf("/");
   if (endPosition === startPosition) return "";
   const parentName = decodedURI.slice(startPosition, endPosition);
-  return parentName;
+  return parentName.replaceAll("/", " → ");
 }
 
 function parentNameDisplay(parentName, id = "parentName") {
