@@ -37,3 +37,20 @@ function autoNumeration(URI) {
   headerDisplay(fileName);
   parentNameDisplay(parentName);
 }
+
+function loadContent(url, target) {
+  fetch(url)
+    .then((response) => response.text())
+    .then((data) => {
+      target.innerHTML = data;
+    })
+    .catch((error) => console.error("Error loading content:", error));
+}
+
+function injectHTML(id = "inject-me") {
+  const elementsToInject = document.querySelectorAll(`[${id}]`);
+  elementsToInject.forEach((element) => {
+    const url = element.getAttribute(id);
+    loadContent(url, element);
+  });
+}
