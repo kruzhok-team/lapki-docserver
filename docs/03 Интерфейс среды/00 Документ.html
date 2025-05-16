@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>00. Раздел документ</title>
+    <title id="title"></title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -12,10 +12,8 @@
     />
   </head>
   <body class="mx-3">
-    <span class="badge text-wrap text-bg-primary mt-3">
-      03. Интерфейс среды
-    </span>
-    <h1 class="display-6 mt-3">00. Раздел документ</h1>
+    <div id="parentName"></div>
+    <div id="header"></div>
     <ol class="list-group list-group-numbered">
       <li class="list-group-item">
         Кнопка <strong>«Создать»</strong> - вызывает диалоговое окно,
@@ -101,5 +99,10 @@
         пиктограммы на текст и позволяет писать код.
       </li> -->
     </ol>
+
+    <script src="../../scripts/index.js"></script>
+    <script>
+      autoNumeration();
+    </script>
   </body>
 </html>

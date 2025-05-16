@@ -7,7 +7,7 @@ keyName = lambda d: d['name']
 def traverse(basedir):
     files = []
     for name in os.listdir(basedir):
-        path = os.path.join(basedir, name)
+        path = basedir + "/" + name
         if os.path.isdir(path):
             files.append({'name': name, 'children': traverse(path)})
         else:
