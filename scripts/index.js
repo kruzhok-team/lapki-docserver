@@ -29,7 +29,9 @@ function headerDisplay(header, id = "header") {
   `;
 }
 
-function autoNumeration(URI) {
+function autoNumeration() {
+  const baseURI = new URL(document.baseURI);
+  const URI = baseURI.pathname;
   const decodedURI = decodeURI(URI);
   const fileName = getFileName(decodedURI);
   const parentName = getParentName(decodedURI);
