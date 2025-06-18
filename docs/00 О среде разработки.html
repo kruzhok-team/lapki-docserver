@@ -69,41 +69,7 @@
       </li>
     </ul>
 
-    <p class="mt-3">Советы по взаимодействию с руководством:</p>
-
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        Нажмите кнопку <strong>Содержание</strong>, чтобы вернуться к меню
-        выбора страниц руководства;
-      </li>
-      <li class="list-group-item">
-        Нажмите кнопку <strong>Просмотр</strong>, чтобы вернуться из раздела
-        <strong>Содержание</strong> к последней открытой странице;
-      </li>
-      <li class="list-group-item">
-        Используйте кнопки <strong>Назад</strong> и <strong>Вперёд</strong> для
-        последовательного перемещения по руководству;
-      </li>
-      <li class="list-group-item">
-        Нажмите кнопку <strong>F1</strong> на вашей клавиатуре для того, чтобы
-        открыть, либо закрыть руководство;
-      </li>
-      <li class="list-group-item">
-        Нажмите на кнопку руководства пользователя
-        <img src="../img/icons/documentation.svg" width="20px" /> на боковой
-        панели, чтобы закрыть, либо открыть руководство;
-      </li>
-      <li class="list-group-item">
-        При&nbsp;наведении на&nbsp;левый край области руководства
-        у&nbsp;Вас&nbsp;изменится указатель мыши, после&nbsp;чего,
-        Вы&nbsp;можете
-        <strong
-          >зажать левую кнопку мыши и&nbsp;сдвинуть её&nbsp;влево
-          (вправо)</strong
-        >, чтобы&nbsp;<strong>растянуть (сжать)</strong> область руководства
-        по&nbsp;Вашему усмотрению.
-      </li>
-    </ul>
+    <div inject-me="/html/common/Руководство.html"></div>
 
     <p class="mt-5 text-bg-success p-2">
       <em>Спасибо, что&nbsp;пользуетесь нашей IDE!</em>
@@ -112,6 +78,7 @@
     <script src="../scripts/index.js"></script>
     <script>
       autoNumeration();
+      injectHTML();
     </script>
   </body>
 </html>
